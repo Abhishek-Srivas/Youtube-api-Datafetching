@@ -1,0 +1,24 @@
+{
+  "name": "youtube-api-fetching",
+  "version": "1.0.0",
+  "description": "Small project to fetch data from youtube using google apo",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "googleapis": "^66.0.0",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.11.5",
+    "youtube-playlist-summary": "^2.1.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "scripts": {
+    "test": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "author": "Abhishek Srivas",
+  "license": "ISC"
+}
