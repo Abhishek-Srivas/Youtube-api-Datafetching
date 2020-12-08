@@ -8,7 +8,7 @@ require("dotenv").config();
 const app = express();
 app.use(bodyParser.json());
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 // To remove CROS (cross-resource-origin-platform) problem
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*"); // to allow all client we use *
