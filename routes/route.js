@@ -25,7 +25,10 @@ const Filter = (req, file, cb) => { //For filtering the type of file
 const fileMulter = multer({storage:fileStorage,fileFilter:Filter}).single('dataFile');
 
 router.post('/addData',controller.addData)
-router.get('/getData',controller.getData)
 router.post('/excelUpload',fileMulter,controller.bulkcsv)
+
+router.get('/getData',controller.getData)
+router.get('/getExcelData',controller.getExcelData)
+
 
 module.exports = router;
