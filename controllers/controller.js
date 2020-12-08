@@ -1,5 +1,6 @@
 const data = require("../models/ytData");
 const playlistSummary = require("youtube-playlist-summary");
+const xlsx = require('xlsx')
 require("dotenv").config();
 
 const config = {
@@ -67,4 +68,14 @@ exports.getData = (req,res,next) =>{
     }).catch(err => {
         res.json({message:"Some Error Occured"})
     })
+}
+
+
+exports.bulkcsv = (req,res,next) =>{
+    
+    console.log(req.file);
+    // var wb = xlsx.readFile(filename);
+    res.json(req.file)
+    // console.log(wb.SheetNames)
+
 }
